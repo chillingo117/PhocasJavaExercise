@@ -1,0 +1,18 @@
+Random list of names was generated from http://www.randat.com/
+
+To Test:
+    non-numbers for resample,
+    non-numbers for menu,
+    nun-numbers for query,
+    invalid number for menu,
+    invalid number for query
+
+Tested scenarios:
+    -1 for resample,
+    0 for resample,
+    100 for resample,
+    exiting using 3,
+    finding the oldest person,
+    blue sky for queries,
+    large number with 10000
+

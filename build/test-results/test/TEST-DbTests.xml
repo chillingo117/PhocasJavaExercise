@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DbTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-12T13:48:13" hostname="LAPTOP-10IGG2JI" time="0.453">
+  <properties/>
+  <testcase name="getDbContentsByCountryTest()" classname="DbTests" time="0.171"/>
+  <testcase name="wipeTest()" classname="DbTests" time="0.043"/>
+  <testcase name="getWholeDbTest()" classname="DbTests" time="0.041"/>
+  <testcase name="resampleTest()" classname="DbTests" time="0.195"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ResourcesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-12T13:48:19" hostname="LAPTOP-10IGG2JI" time="0.038">
+  <properties/>
+  <testcase name="firstNamesTest()" classname="ResourcesTest" time="0.031"/>
+  <testcase name="lastNamesTest()" classname="ResourcesTest" time="0.002"/>
+  <testcase name="countriesTest()" classname="ResourcesTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
