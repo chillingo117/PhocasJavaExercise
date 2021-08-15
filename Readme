@@ -5,15 +5,15 @@ Manual tests were done for testing the CLI interface.
 The app is now functional, but some minor improvements to code quality could be made.
 
 The Main class acts as the class that prints info for the user and reads user input.
-The Main class then invokes functions from Query and Db to perform user requested behavior.
-Query pulls data through Db, and processes it into a form requested by the user.
+The Main class then invokes functions from query and Db to perform user requested behavior.
+query pulls data through Db, and processes it into a form requested by the user.
 Main then displays the information requested by the user, if applicable.
 
 To Do:
-   Change package "Query" to "query".
+   Change package "query" to "query".
    In Main, change import for the query package to import query.*
    Consider creating a new class to validate user inputs instead of leaving that functionality in Main.
-   Decouple Main and Db by requiring all actions the user makes to be processed through Query.
+   Decouple Main and Db by requiring all actions the user makes to be processed through query.
    Add a confirmation message to Db resample.
    Consider separating user IO from Main to a separate class.
    Consider finding a way to make unit tests for user input and output.

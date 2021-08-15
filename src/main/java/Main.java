@@ -1,7 +1,7 @@
 
-import Query.CountryGroup;
-import Query.Query;
-import Query.AgeGroup;
+import query.CountryGroup;
+import query.Query;
+import query.AgeGroup;
 import generation.Person;
 import data.Db;
 

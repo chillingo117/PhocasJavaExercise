@@ -1,4 +1,4 @@
-import Query.*;
+import query.*;
 import data.Db;
 import generation.Person;
 import org.junit.jupiter.api.*;
