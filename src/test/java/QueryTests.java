@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Tests for the Query class
  */
 class QueryTests {
-    Query query = Query.getQuery();
+    Query query = query.getQuery();
     Db db = Db.getDb();
 
     @BeforeEach
