@@ -10,7 +10,6 @@ query pulls data through Db, and processes it into a form requested by the user.
 Main then displays the information requested by the user, if applicable.
 
 To Do:
-   Change package "query" to "query".
    In Main, change import for the query package to import query.*
    Consider creating a new class to validate user inputs instead of leaving that functionality in Main.
    Decouple Main and Db by requiring all actions the user makes to be processed through query.
