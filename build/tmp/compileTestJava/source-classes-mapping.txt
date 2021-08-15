@@ -1,8 +1,0 @@
-GeneratePersonTests.java
- GeneratePersonTests
-ResourcesTest.java
- ResourcesTest
-DbTests.java
- DbTests
-QueryTests.java
- QueryTests
