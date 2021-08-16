@@ -70,9 +70,9 @@ public class UserIO {
         // Get the oldest people
         ArrayList<Person> oldests = query.getOldest();
         if (oldests.size() == 1) {
-            System.out.println("The oldest person in the database is: ");
+            System.out.println("The oldest person in the database is:");
         } else {
-            System.out.println("The oldest people in the database are: ");
+            System.out.println("The oldest people in the database are:");
         }
         for (Person old : oldests) {
             System.out.println(old);
