@@ -98,6 +98,7 @@ public class Query {
             }
         }
 
+        //Sort response by ascending floor (youngest first)
         responseData.sort(Comparator.comparingDouble(o -> o.floor));
 
         return responseData;

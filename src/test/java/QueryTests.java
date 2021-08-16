@@ -54,27 +54,26 @@ class QueryTests {
     /**
      * Tests that the group by age range, given a country, works.
      * Tests edge cases like 19 and 20, as well as 99 and 0.
+     * Tests that the groups are in the correct order (youngest first)
      */
     @Test
     void groupByAgeRangeTest() {
-        int[] ages = {1, 10,11,12,15,19,20,22,25,30,50,46,79,99};
+        int[] ages = {1,10,11,12,15,19,20,22,25,30,50,46,79,99,63,82};
         for(int age : ages){
             Person newPerson = new Person();
             newPerson.setAge(age);
+            newPerson.setFirstName(Integer.toString(age));
             newPerson.setCountry("New Zealand");
             newPerson.setId(Integer.toString(age+100));
             db.addPerson(newPerson);
         }
         ArrayList<AgeGroup> groups = query.groupByAgeRangeGivenCountry("New Zealand");
-        Assertions.assertEquals(8, groups.size());
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 0 && g.people.size() == 1)));
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 1 && g.people.size() == 5)));
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 2 && g.people.size() == 3)));
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 3 && g.people.size() == 1)));
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 4 && g.people.size() == 1)));
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 5 && g.people.size() == 1)));
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 7 && g.people.size() == 1)));
-        Assertions.assertTrue(groups.stream().anyMatch(g -> (g.floor == 9 && g.people.size() == 1)));
+        Assertions.assertEquals(10, groups.size());
+        int[] correctSizes = {1,5,3,1,1,1,1,1,1,1};
+        for(int i=0; i<10; i++){
+            Assertions.assertEquals(groups.get(i).floor, i);
+            Assertions.assertEquals(groups.get(i).people.size(), correctSizes[i]);
+        }
     }
 
     /**

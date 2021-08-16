@@ -2,4 +2,4 @@
 .gradle
 build
 src/main/java/resources/lock
-src/main/java/resources/people.json
+src/main/resources/people.json
