@@ -100,4 +100,17 @@ class QueryTests {
         Assertions.assertEquals(longests.get(0).getLastName(), "Farmer");
         Assertions.assertEquals(longests.get(1).getLastName(), "Farmer");
     }
+
+    @Test
+    void countryExistsTest(){
+        Assertions.assertTrue(query.countryExists("Australia"));
+        Assertions.assertTrue(query.countryExists("New Zealand"));
+        Assertions.assertTrue(query.countryExists("China"));
+        Assertions.assertTrue(query.countryExists("United States of America"));
+        Assertions.assertTrue(query.countryExists("Germany"));
+
+        Assertions.assertFalse(query.countryExists(""));
+        Assertions.assertFalse(query.countryExists("1"));
+        Assertions.assertFalse(query.countryExists("australia"));
+    }
 }

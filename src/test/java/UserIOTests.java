@@ -70,7 +70,7 @@ class UserIOTests {
 //    }
 
     /**
-     * Tests to see if printing the oldest person prints the
+     * Tests to see if printing the oldest person prints the correct information
      */
     @Test
     void oldestPrintTest(){
