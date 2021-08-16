@@ -4,8 +4,7 @@ import data.Db;
 import data.Resources;
 import generation.Person;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Query class
@@ -98,6 +97,9 @@ public class Query {
                 responseData.add(newGroup);
             }
         }
+
+        responseData.sort(Comparator.comparingDouble(o -> o.floor));
+
         return responseData;
     }
 
