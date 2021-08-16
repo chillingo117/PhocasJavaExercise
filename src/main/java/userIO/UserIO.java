@@ -9,9 +9,16 @@ import java.util.Scanner;
 
 import query.*;
 
+/**
+ * UserIO class
+ * Fully static
+ *
+ * Prompts and validates user input,
+ * Prints user-requested output
+ */
 public class UserIO {
     private static final Scanner sc = new Scanner(System.in);
-    private static Query query = Query.getQuery();
+    private static final Query query = Query.getQuery();
 
     private static final String mainMenu = "What action would you like to take? \n" +
             "1: Generate new dataset\n" +
@@ -26,6 +33,10 @@ public class UserIO {
 
     private static final String countryPrompt = "Please enter the country of interest.";
 
+    /**
+     * Prompts user to type input for the main menu
+     * @return validated user input as integer
+     */
     public static int mainMenuInput(){
         System.out.println(mainMenu);
         String input = sc.nextLine();
@@ -37,6 +48,10 @@ public class UserIO {
         }
     }
 
+    /**
+     * Prompts user to type input for the query menu
+     * @return validated user input as integer
+     */
     public static int queryMenuInput(){
         System.out.println(queryMenu);
         String input = sc.nextLine();
@@ -48,6 +63,9 @@ public class UserIO {
         }
     }
 
+    /**
+     * Prints the oldest person/people
+     */
     public static void printOldestPeople(){
         // Get the oldest people
         ArrayList<Person> oldests = query.getOldest();
@@ -61,8 +79,10 @@ public class UserIO {
         }
     }
 
+    /**
+     * Prints the number of people in each country
+     */
     public static void printGroupByCountryCount(){
-        // get the count of everyone grouped by country
         for (CountryGroup group : query.groupByCountry()) {
             System.out.println("There are " + group.people.size() + " people in " + group.country);
         }
@@ -70,16 +90,16 @@ public class UserIO {
 
     /**
      * Prompts user to type in a country, and only accepts valid country inputs.
-     * Also provides the option to give up.
+     * Also provides the option to cancel.
      * @return a string that is a valid country, or null if this query was cancelled
      */
     private static String getCountryInput(){
         System.out.println(countryPrompt);
         String s = sc.nextLine();
         while(!query.countryExists(s) && !s.equals("x")){
-            System.out.println("That country is not available.");
+            System.out.println("That country is not available. Please ensure correct spelling and capitalization");
             System.out.println(countryPrompt);
-            System.out.println("Enter 'x' to cancel");
+            System.out.println("Enter 'x' to cancel this query");
             s = sc.nextLine();
         }
         if(s.equals("x")){
@@ -90,6 +110,9 @@ public class UserIO {
 
     }
 
+    /**
+     * Prints people, filtered by country, in group brackets of 10 years
+     */
     public static void printFilterByCountryGroupByAge() {
         // filter by country, then group by age brackets of 10
         String country = getCountryInput();
@@ -107,6 +130,9 @@ public class UserIO {
         }
     }
 
+    /**
+     * Prints the people with the longest name
+     */
     public static void printLongestNamedPeople(){
         ArrayList<Person> longests = query.getLongestNamed();
         if (longests.size() == 1) {
