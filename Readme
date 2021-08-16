@@ -12,8 +12,3 @@ Main then displays the information requested by the user, if applicable.
 To Do:
     Find out why simulating user input isnt working for UserIOTest.querymenuInput
 
-   Decouple Main and Db by requiring all actions the user makes to be processed through query.
-   Add a confirmation message to Db resample.
-   Consider separating user IO from Main to a separate class.
-   Consider finding a way to make unit tests for user input and output.
-  
