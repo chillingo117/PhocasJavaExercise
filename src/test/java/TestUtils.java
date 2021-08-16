@@ -1,7 +1,7 @@
 import data.Db;
 import generation.Person;
 
-public class TestUtils {
+class TestUtils {
     private static final Db db = Db.getDb();
 
     public static void writeDummyDb() {

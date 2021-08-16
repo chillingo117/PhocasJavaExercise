@@ -8,7 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-public class UserIOTests {
+class UserIOTests {
     private final InputStream sysInBackup = System.in; // backup System.in to restore it later
     private final PrintStream sysOutBackup = System.out;
 
