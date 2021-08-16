@@ -9,6 +9,8 @@ The Main class then invokes functions from query and Db to perform user requeste
 query pulls data through Db, and processes it into a form requested by the user.
 Main then displays the information requested by the user, if applicable.
 
+The Main class starts and stops the app, and triggers the main
+
 To Do:
     Find out why simulating user input isnt working for UserIOTest.querymenuInput
 

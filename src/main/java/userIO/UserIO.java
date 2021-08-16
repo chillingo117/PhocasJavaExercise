@@ -177,5 +177,6 @@ public class UserIO {
         String s = sc.nextLine();
         int sampleSize = getValidSampleCount(s);
         Db.getDb().resampleDb(sampleSize);
+        System.out.println("New sample of " + s + " generated.");
     }
 }
